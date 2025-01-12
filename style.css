@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --bg-color: hsl(225, 100%, 94%);
+    --title-color: hsl(223, 47%, 23%);
+    --text-color: #7c7b7b;
+    --a-color: hsl(245, 75%, 52%);
+    --a-hover-color: hsl(245, 84%, 61%);
+    --btn-hover-color: hsl(245, 84%, 61%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.order-summary-content {
+    text-align: center;
+}
+
+.order-summary-title {
+    columns: var(--title-color);
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.order-summary-text {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.annual-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.annual-box-left {
+    display: flex;
+    /* text-align: left; */
+    align-items: center;
+}
+
+h4 {
+    color: var(--title-color);
+}
+
+.annual-plan {
+    margin-left: 0.6rem;
+}
+
+.annual-plan p {
+    color: var(--text-color);
+}
+
+.change {
+    font-weight: bold;
+    color: var(--a-color);
+}
+
+.change:hover {
+    text-decoration: none;
+    color: var(--a-hover-color);
+}
+
+.proceed-btn {
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color: var(--a-color);
+    border-radius: 1rem;
+    width: 80%;
+    margin: auto;
+    padding: 0.7rem;
+}
+
+.proceed-btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.cancel-btn {
+    display: block;
+    margin: 1rem auto;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.6rem;
+    width: fit-content;
+}
+
+.cancel-btn:hover {
+    color: var(--title-color);
+}
+
+@media (max-width: 425px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+
+    main {
+        max-width: 85%;
+    }
+
+    .order-summary-content {
+        padding: 0 1rem;
+    }
+
+    .order-summary-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* .attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+} */
